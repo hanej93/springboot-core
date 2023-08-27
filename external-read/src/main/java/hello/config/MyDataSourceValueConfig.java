@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Configuration
-public class MyDatasourceValueConfig {
+public class MyDataSourceValueConfig {
 
 	@Value("${my.datasource.url}")
 	private String url;
