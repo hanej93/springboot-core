@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
+import hello.order.gauge.StockConfigV1;
+import hello.order.gauge.StockConfigV2;
 import hello.order.v0.OrderConfigV0;
 import hello.order.v1.OrderConfigV1;
 import hello.order.v2.OrderConfigV2;
@@ -16,7 +18,8 @@ import hello.order.v4.OrderConfigV4;
 // @Import(OrderConfigV1.class)
 // @Import(OrderConfigV2.class)
 // @Import(OrderConfigV3.class)
-@Import(OrderConfigV4.class)
+// @Import({OrderConfigV4.class, StockConfigV1.class})
+@Import({OrderConfigV4.class, StockConfigV2.class})
 @SpringBootApplication(scanBasePackages = "hello.controller")
 public class ActuatorApplication {
 
